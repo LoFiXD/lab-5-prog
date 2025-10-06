@@ -2,128 +2,49 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Viajes Virtuales</title>
-  <style>
-    /* Estilo general para el cuerpo de la página */
-    body {
-      font-family: Arial, sans-serif; /* Fuente de letra */
-      margin: 0; /* Elimina el margen por defecto del navegador */
-      padding: 0;
-      background-color: #f4f4f4; /* Un fondo gris claro */
-      color: #333; /* Color de texto principal */
-    }
-
-    /* Estilo para el encabezado principal */
-    header {
-      background-color: #007BFF; /* Fondo azul */
-      color: white; /* Texto blanco */
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em; /* Tamaño de fuente más grande */
-    }
-
-    /* Estilo para la sección de contenido */
-    section {
-      padding: 20px;
-      margin: 20px auto; /* Centra la sección y añade margen */
-      max-width: 800px; /* Limita el ancho del contenido */
-      background-color: white; /* Fondo blanco para el contenido */
-      border-radius: 8px; /* Esquinas redondeadas */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    }
-    
-    section p strong {
-        color: #007BFF; /* Destaca el nombre del sitio */
-        font-weight: bold;
-    }
-
-    /* Estilo para la barra de navegación */
-    nav {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 15px;
-      background-color: #e9ecef; /* Fondo gris suave */
-      border-radius: 8px;
-    }
-
-    nav h2 {
-        color: #007BFF;
-        border-bottom: 2px solid #007BFF;
-        padding-bottom: 5px;
-        margin-top: 0;
-    }
-
-    nav ul {
-      list-style-type: none; /* Quita las viñetas */
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline; /* Hace que los elementos de la lista se muestren en línea */
-      margin-right: 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none; /* Quita el subrayado de los enlaces */
-      color: #333; /* Color de texto */
-      font-weight: bold;
-      transition: color 0.3s; /* Transición suave para el color */
-    }
-
-    nav ul li a:hover {
-      color: #FFC107; /* Cambia el color al pasar el ratón (amarillo) */
-    }
-
-    /* Estilo para el pie de página */
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #343a40; /* Fondo oscuro */
-      color: white;
-      margin-top: 30px;
-    }
-
-    footer a {
-      color: #FFC107; /* Enlace en color amarillo */
-      text-decoration: none;
-    }
-
-    footer a:hover {
-        text-decoration: underline;
-    }
-  </style>
+  
+  <link rel="stylesheet" href="style_jose.css"> 
 </head>
 <body>
-  <header>
+  <header id="main-header">
     <h1>Viajes Virtuales</h1>
   </header>
 
-  <section>
-    <p>
-      Bienvenido a <strong>Viajes Virtuales</strong>, un espacio creado para explorar destinos turísticos desde la comodidad de tu casa.
-      Descubre culturas, paisajes y experiencias únicas alrededor del mundo.
-    </p>
-    <p>
-      Aquí encontrarás información de los lugares más fascinantes, incluyendo actividades, precios y recomendaciones para tu próxima aventura.
-    </p>
-  </section>
-
-  <nav>
-    <h2>Destinos</h2>
-    <ul>
-      <li><a href="lab5-ledezma-grupo4.html">Panamá</a></li>
-      <li><a href="david_lab5.html">Francia</a></li>
-      <li><a href="sebascssviajes.html">Colombia</a></li>
-      <li><a href="BayronSantos.html">Rusia</a></li>
-    </ul>
-  </nav>
+  <div class="container"> 
+      
+    <section class="content-section">
+      <p>
+        Bienvenido a <strong>Viajes Virtuales</strong>, un espacio creado para explorar destinos turísticos desde la comodidad de tu casa.
+        Descubre culturas, paisajes y experiencias únicas alrededor del mundo.
+      </p>
+      <div class="columns-layout">
+          <div class="column">
+              <h3>¿Qué ofrecemos?</h3>
+              <p>Experiencias inmersivas, guías detalladas y la mejor información turística, todo virtualmente.</p>
+          </div>
+          <div class="column">
+              <h3>Planifica tu ruta</h3>
+              <p>Aunque sean virtuales, te ayudamos a soñar con tu próxima aventura real. ¡Empieza a explorar!</p>
+          </div>
+      </div>
+    </section>
+    
+    <nav class="main-nav content-section"> 
+      <h2>Destinos</h2>
+      <ul>
+            <li><a href="lab5-ledezma-grupo4.html">Panamá</a></li>
+            <li><a href="david_lab5.html">Francia</a></li>
+            <li><a href="sebascssviajes.html">Colombia</a></li>
+            <li><a href="BayronSantos.html">Rusia</a></li>
+      </ul>
+    </nav>
+    
+  </div> 
 
   <footer>
-    <p><a href="nosotros.html">Conoce a nuestro equipo</a></p>
+    <p><a href="nosotros_jose.html">Conoce a nuestro equipo</a></p> 
   </footer>
 </body>
 </html>
