@@ -1,83 +1,110 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Viajes Virtuales</title>
-    
-    <!-- Estilos integrados -->
-    <style>
-    :root{
-        --bg-1: #0f1724;
-        --accent: #2e8b57;
-        --muted: #6b7280;
-        --card: #ffffff;
-        --soft-bg: #f5f7fb;
-        --accent-2: #ffb547;
-        --max-width: 1100px;
-        --base-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    * { box-sizing: border-box; }
-    html,body { height:100%; margin:0; padding:0; font-family: var(--base-font); background: var(--soft-bg); color: #111827; }
 
-    .container{ width: 90%; max-width: var(--max-width); margin: 0 auto; padding: 1.25rem; }
+```
+<!-- Estilos integrados -->
+<style>
+:root{
+    --bg-1: #0f1724;
+    --accent: #2e8b57;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --soft-bg: #f5f7fb;
+    --accent-2: #ffb547;
+    --max-width: 1100px;
+    --base-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; padding:0; font-family: var(--base-font); background: var(--soft-bg); color: #111827; }
 
-    .site-header{ background: linear-gradient(90deg, var(--bg-1), rgba(15,23,36,0.9)); color: #fff; padding: 1.5rem 0; margin-bottom: 1.25rem; }
-    .header-inner{ display:flex; flex-direction: column; gap:0.5rem; align-items: center; text-align:center; }
-    .site-title{ font-size: 1.75rem; margin: 0; letter-spacing: 0.4px; font-weight: 700; }
-    .site-tagline{ margin: 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+.container{ width: 90%; max-width: var(--max-width); margin: 0 auto; padding: 1.25rem; }
 
-    .nav-list{ list-style: none; display:flex; gap: 1rem; padding: 0; margin: 0.75rem 0 0; }
-    .nav-link{ color: rgba(255,255,255,0.95); text-decoration: none; padding: 0.45rem 0.75rem; border-radius: 8px; transition: transform 180ms, background-color 180ms, box-shadow 180ms; font-weight:600; }
-    .nav-link:hover{ background: rgba(255,255,255,0.06); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(2,6,23,0.25); }
-    .nav-link:active{ transform: translateY(0); background: rgba(255,255,255,0.09); }
-    .nav-link:visited{ color: rgba(235,235,235,0.95); }
+.site-header{ background: linear-gradient(90deg, var(--bg-1), rgba(15,23,36,0.9)); color: #fff; padding: 1.5rem 0; margin-bottom: 1.25rem; }
+.header-inner{ display:flex; flex-direction: column; gap:0.5rem; align-items: center; text-align:center; }
+.site-title{ font-size: 1.75rem; margin: 0; letter-spacing: 0.4px; font-weight: 700; }
+.site-tagline{ margin: 0; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
 
-    .hero{ background-image: linear-gradient(rgba(4,6,14,0.35), rgba(4,6,14,0.35)), url('https://images.pexels.com/photos/1619311/pexels-photo-1619311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-size: cover; background-position: center; color: #fff; padding: 3rem 1rem; border-radius: 12px; margin-bottom: 1rem; }
-    .hero-title{ font-size: 2rem; margin: 0 0 0.25rem; }
-    .hero-sub{ margin:0; color: rgba(255,255,255,0.92); }
+.nav-list{ list-style: none; display:flex; gap: 1rem; padding: 0; margin: 0.75rem 0 0; }
+.nav-link{ color: rgba(255,255,255,0.95); text-decoration: none; padding: 0.45rem 0.75rem; border-radius: 8px; transition: transform 180ms, background-color 180ms, box-shadow 180ms; font-weight:600; }
+.nav-link:hover{ background: rgba(255,255,255,0.06); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(2,6,23,0.25); }
+.nav-link:active{ transform: translateY(0); background: rgba(255,255,255,0.09); }
+.nav-link:visited{ color: rgba(235,235,235,0.95); }
 
-    .card{ background: var(--card); padding: 1.25rem; border-radius: 10px; margin-bottom: 1rem; box-shadow: 0 6px 18px rgba(16,24,40,0.06); border: 1px solid rgba(16,24,40,0.03); }
-    .colored-section{ background: linear-gradient(180deg, #fffaf0, #fff7ef); border: 1px solid rgba(255,180,71,0.12); }
+.hero{ background-image: linear-gradient(rgba(4,6,14,0.35), rgba(4,6,14,0.35)), url('https://images.pexels.com/photos/1619311/pexels-photo-1619311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-size: cover; background-position: center; color: #fff; padding: 3rem 1rem; border-radius: 12px; margin-bottom: 1rem; }
+.hero-title{ font-size: 2rem; margin: 0 0 0.25rem; }
+.hero-sub{ margin:0; color: rgba(255,255,255,0.92); }
 
-    .two-column .col{ width: 48%; float: left; padding: 0.5rem; }
-    .two-column .left{ margin-right: 4%; }
-    .two-column .right{ background:#f9fafb; border-radius:8px; position:relative; }
-    .info-box { padding: 0.75rem; }
-    .floating-note { position: absolute; right: 1rem; top: 1rem; background: var(--accent-2); color: #111; padding: 0.35rem 0.55rem; font-size: 0.85rem; border-radius: 6px; }
+.card{ background: var(--card); padding: 1.25rem; border-radius: 10px; margin-bottom: 1rem; box-shadow: 0 6px 18px rgba(16,24,40,0.06); border: 1px solid rgba(16,24,40,0.03); }
+.colored-section{ background: linear-gradient(180deg, #fffaf0, #fff7ef); border: 1px solid rgba(255,180,71,0.12); }
 
-    .media-grid{ display: flex; gap: 1rem; flex-wrap:wrap; align-items: flex-start; }
-    .media-grid figure{ margin:0; flex:1 1 300px; }
-    .responsive-img{ width:100%; height:auto; display:block; border-radius:8px; }
+.two-column .col{ width: 48%; float: left; padding: 0.5rem; }
+.two-column .left{ margin-right: 4%; }
+.two-column .right{ background:#f9fafb; border-radius:8px; position:relative; }
+.info-box { padding: 0.75rem; }
+.floating-note { position: absolute; right: 1rem; top: 1rem; background: var(--accent-2); color: #111; padding: 0.35rem 0.55rem; font-size: 0.85rem; border-radius: 6px; }
 
-    .video-wrapper{ position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; flex:1 1 420px; }
-    .video-wrapper iframe{ position: absolute; top:0; left:0; width:100%; height:100%; border:0; }
+.media-grid{ display: flex; gap: 1rem; flex-wrap:wrap; align-items: flex-start; }
+.media-grid figure{ margin:0; flex:1 1 300px; }
+.responsive-img{ width:100%; height:auto; display:block; border-radius:8px; }
 
-    .site-footer{ background: linear-gradient(180deg, #fafafa, #fff); }
-    .footer-grid{ display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; align-items:center; }
-    .footer-link{ color:var(--accent); text-decoration:none; }
+.video-wrapper{ position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; flex:1 1 420px; }
+.video-wrapper iframe{ position: absolute; top:0; left:0; width:100%; height:100%; border:0; }
 
-    h2{ font-size: 1.25rem; margin-top:0; }
-    h3{ font-size: 1.05rem; margin-bottom:0.5rem; color:var(--bg-1); }
-    .price-list{ margin:0; padding-left:1rem; }
-    .price-list li{ margin-bottom:0.35rem; }
+.site-footer{ background: linear-gradient(180deg, #fafafa, #fff); }
+.footer-grid{ display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; align-items:center; }
+.footer-link{ color:var(--accent); text-decoration:none; }
 
-    @media (max-width: 900px) {
-        .nav-list{ gap:0.5rem; flex-wrap:wrap; justify-content:center; }
-        .two-column .col{ width:100%; float:none; margin:0 0 0.75rem 0; }
-        .header-inner{ align-items:flex-start; text-align:left; }
-    }
-    @media (max-width: 480px) {
-        .site-title{ font-size:1.25rem; }
-        .hero{ padding: 2rem 1rem; }
-        .container{ width:95%; padding:0.75rem; }
-        .floating-note{ display:none; }
-    }
-    img, iframe{ max-width:100%; height:auto; }
-    #main-header { border-bottom: 4px solid rgba(255,255,255,0.03); }
-    #main-nav .nav-link{ letter-spacing: 0.2px; }
-    a:focus { outline: 3px solid rgba(46,139,87,0.18); outline-offset: 2px; border-radius:6px; }
-    </style>
+/* Botón Volver al inicio */
+.back-button {
+  display: inline-block;
+  margin: 1.5rem auto;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: #256f45;
+  transform: scale(1.05);
+}
+
+.back-button:active {
+  transform: scale(0.97);
+}
+
+h2{ font-size: 1.25rem; margin-top:0; }
+h3{ font-size: 1.05rem; margin-bottom:0.5rem; color:var(--bg-1); }
+.price-list{ margin:0; padding-left:1rem; }
+.price-list li{ margin-bottom:0.35rem; }
+
+@media (max-width: 900px) {
+    .nav-list{ gap:0.5rem; flex-wrap:wrap; justify-content:center; }
+    .two-column .col{ width:100%; float:none; margin:0 0 0.75rem 0; }
+    .header-inner{ align-items:flex-start; text-align:left; }
+}
+@media (max-width: 480px) {
+    .site-title{ font-size:1.25rem; }
+    .hero{ padding: 2rem 1rem; }
+    .container{ width:95%; padding:0.75rem; }
+    .floating-note{ display:none; }
+}
+img, iframe{ max-width:100%; height:auto; }
+#main-header { border-bottom: 4px solid rgba(255,255,255,0.03); }
+#main-nav .nav-link{ letter-spacing: 0.2px; }
+a:focus { outline: 3px solid rgba(46,139,87,0.18); outline-offset: 2px; border-radius:6px; }
+</style>
+```
+
 </head>
 <body>
     <header id="main-header" class="site-header">
@@ -95,79 +122,90 @@
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h2 class="hero-title">Descubre Colombia</h2>
-                <p class="hero-sub">Paisajes, cultura y gastronomía que te esperan.</p>
-            </div>
-        </section>
+```
+<main class="container">
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Descubre Colombia</h2>
+            <p class="hero-sub">Paisajes, cultura y gastronomía que te esperan.</p>
+        </div>
+    </section>
 
-        <section id="colombia" class="card two-column">
-            <article class="col left">
-                <h2>Colombia: Un Paraíso por Descubrir</h2>
-                <p>Colombia es un país lleno de diversidad, cultura y paisajes impresionantes...</p>
-                <p>Durante tu estadía, podrás visitar ciudades vibrantes como Bogotá, Medellín y Cartagena...</p>
-            </article>
-            <aside class="col right info-box">
-                <h3>Información rápida</h3>
-                <ul>
-                    <li>Clima: templado a tropical</li>
-                    <li>Moneda: Peso colombiano (COP)</li>
-                    <li>Idioma: Español</li>
-                </ul>
-                <div class="floating-note">Nota rápida</div>
-            </aside>
-            <div style="clear: both;"></div>
-        </section>
-
-        <section id="precios" class="card colored-section">
-            <h3>Precios y Sitios a Visitar</h3>
-            <ul class="price-list">
-                <li>Vuelo ida y vuelta: <strong>$500 USD</strong></li>
-                <li>Alojamiento (7 noches): <strong>$350 USD</strong></li>
-                <li>Tour por Cartagena: <strong>$60 USD</strong></li>
-                <li>Excursión a la Zona Cafetera: <strong>$80 USD</strong></li>
-                <li>Visita al Parque Tayrona: <strong>$40 USD</strong></li>
+    <section id="colombia" class="card two-column">
+        <article class="col left">
+            <h2>Colombia: Un Paraíso por Descubrir</h2>
+            <p>Colombia es un país lleno de diversidad, cultura y paisajes impresionantes...</p>
+            <p>Durante tu estadía, podrás visitar ciudades vibrantes como Bogotá, Medellín y Cartagena...</p>
+        </article>
+        <aside class="col right info-box">
+            <h3>Información rápida</h3>
+            <ul>
+                <li>Clima: templado a tropical</li>
+                <li>Moneda: Peso colombiano (COP)</li>
+                <li>Idioma: Español</li>
             </ul>
-            <p><strong>Tiempo de estadía recomendado:</strong> 7 días</p>
-        </section>
+            <div class="floating-note">Nota rápida</div>
+        </aside>
+        <div style="clear: both;"></div>
+    </section>
 
-        <section id="galeria" class="card media-section">
-            <h3>Galería y video representativo</h3>
-            <div class="media-grid">
-                <figure>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-CAY8sam03KYgcdrKL6YX2Zz4Kb7oNVLTyQ&s"
-                         alt="Paisaje de Colombia" class="responsive-img">
-                    <figcaption>Hermoso paisaje colombiano</figcaption>
-                </figure>
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/NVnDu1HzqOs" 
-    title="YouTube video player"
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
+    <section id="precios" class="card colored-section">
+        <h3>Precios y Sitios a Visitar</h3>
+        <ul class="price-list">
+            <li>Vuelo ida y vuelta: <strong>$500 USD</strong></li>
+            <li>Alojamiento (7 noches): <strong>$350 USD</strong></li>
+            <li>Tour por Cartagena: <strong>$60 USD</strong></li>
+            <li>Excursión a la Zona Cafetera: <strong>$80 USD</strong></li>
+            <li>Visita al Parque Tayrona: <strong>$40 USD</strong></li>
+        </ul>
+        <p><strong>Tiempo de estadía recomendado:</strong> 7 días</p>
+    </section>
+
+    <section id="galeria" class="card media-section">
+        <h3>Galería y video representativo</h3>
+        <div class="media-grid">
+            <figure>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-CAY8sam03KYgcdrKL6YX2Zz4Kb7oNVLTyQ&s"
+                     alt="Paisaje de Colombia" class="responsive-img">
+                <figcaption>Hermoso paisaje colombiano</figcaption>
+            </figure>
+            <div class="video-wrapper">
+                <iframe width="560" height="315" 
+src="https://www.youtube.com/embed/NVnDu1HzqOs" 
+title="YouTube video player"
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
+```
+
 </iframe>
                 </div>
             </div>
         </section>
 
-        <footer id="contacto" class="site-footer card">
-            <div class="footer-grid">
-                <div>
-                    <h4>Contacto</h4>
-                    <p>Correo: info@viajesvirtuales.example</p>
-                </div>
-                <div>
-                    <h4>Síguenos</h4>
-                    <p>
-                        <a href="#" class="footer-link">Instagram</a> |
-                        <a href="#" class="footer-link">Facebook</a>
-                    </p>
-                </div>
+```
+    <footer id="contacto" class="site-footer card">
+        <div class="footer-grid">
+            <div>
+                <h4>Contacto</h4>
+                <p>Correo: info@viajesvirtuales.example</p>
             </div>
-        </footer>
-    </main>
+            <div>
+                <h4>Síguenos</h4>
+                <p>
+                    <a href="#" class="footer-link">Instagram</a> |
+                    <a href="#" class="footer-link">Facebook</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de volver al inicio -->
+    <div style="text-align:center;">
+        <a href="index_jose.html" class="back-button">← Volver al inicio</a>
+    </div>
+</main>
+```
+
 </body>
 </html>
