@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panamá — Guía rápida</title>
+  <meta name="description" content="Página informativa con precios, lugares a visitar, imagen, video y enlace al índice." />
+  <style>
+    :root { --max: 900px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #222; background: #fafafa; }
+    header, main, footer { max-width: var(--max); margin: auto; padding: 1rem; }
+    header { padding-top: 2rem; }
+    h1 { margin: 0 0 .5rem; }
+    figure { margin: 1rem 0; }
+    img, video { width: 100%; height: auto; border-radius: 12px; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 1rem; }
+    a.button { display: inline-block; margin-top: 1rem; padding: .6rem 1rem; border-radius: 999px; background: #0a7ea4; color: #fff; text-decoration: none; }
+    a.button:focus, a.button:hover { background: #095f7d; }
+    ul { padding-left: 1.2rem; }
+    footer { color: #666; font-size: .9rem; padding-bottom: 2rem; }
+  </style>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Ruta">
+      <a href="index.html" class="button" title="Volver al índice">← Volver al inicio</a>
+    </nav>
+    <h1>Panamá</h1>
+    <p><strong>Panamá</strong> es un país de Centroamérica conocido por su biodiversidad, su centro financiero y el icónico Canal de Panamá.</p>
+    <p>En la Ciudad de Panamá conviven rascacielos modernos con el encanto histórico del <em>Casco Antiguo</em>, ofreciendo gastronomía diversa y vida nocturna.</p>
+    <p>Fuera de la capital, destacan playas del Caribe y el Pacífico, bosques nubosos y comunidades indígenas que preservan tradiciones únicas.</p>
+  </header>
+
+  <main class="grid" role="main">
+    <section class="card" aria-labelledby="lugares">
+      <h2 id="lugares">Lugares para visitar</h2>
+      <ul>
+        <li>Canal de Panamá (Esclusas de Miraflores / Cocolí)</li>
+        <li>Casco Antiguo (plazas, iglesias, museos y cafés)</li>
+        <li>Cinta Costera y Causeway de Amador</li>
+        <li>Islas de San Blas (Guna Yala)</li>
+        <li>Boquete (senderismo y café de altura)</li>
+        <li>Bocas del Toro (playas y vida marina)</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="precios">
+      <h2 id="precios">Lista de precios estimados</h2>
+      <ul>
+        <li>Metro (viaje sencillo): 0,35–0,50 USD</li>
+        <li>Comida local (almuerzo): 5–10 USD</li>
+        <li>Café especialidad: 3–6 USD</li>
+        <li>Entrada Centro de Visitantes del Canal: 10–17 USD</li>
+        <li>Tour de día a islas cercanas: 30–80 USD</li>
+        <li>Alojamiento (por noche, rango medio): 40–100 USD</li>
+      </ul>
+      <p style="font-size:.9rem;color:#666;">Nota: precios referenciales; pueden variar por temporada y proveedor.</p>
+    </section>
+
+    <section class="card" aria-labelledby="imagen">
+      <h2 id="imagen">Imagen representativa</h2>
+      <!-- Reemplaza la ruta por una imagen propia del repo: /assets/panama.jpg -->
+      <figure>
+        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1600&auto=format&fit=crop" 
+             alt="Vista del Casco Antiguo de Ciudad de Panamá con el skyline al fondo">
+        <figcaption>Casco Antiguo y skyline de la Ciudad de Panamá.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card" aria-labelledby="video">
+      <h2 id="video">Video corto</h2>
+      <!-- Puedes sustituir por un archivo local: /assets/panama.mp4 -->
+      <video controls preload="metadata" poster="https://images.unsplash.com/photo-1544989164-31dc3c645987?q=80&w=1200&auto=format&fit=crop" aria-label="Video corto sobre Panamá">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento <code>video</code>.
+      </video>
+      <p style="font-size:.9rem;color:#666;">Sugerencia: reemplaza este MP4 por un clip propio (10–30 s) guardado en <code>/assets</code>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Guía rápida de Panamá. Hecho con HTML y CSS puro.</p>
+  </footer>
+</body>
+</html>
